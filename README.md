@@ -1,7 +1,7 @@
 # OPE_intro_a_R
 Curso de Introducción a R para la Ciencia de Datos para el Observatorio Político Electoral - Ministerio del Interior
 
-# [Franco Galeano](gefero.github.io)
+# [Franco Galeano](https://tartagalensis.netlify.app/)
 
 # Presentación
 Los objetivos generales de este curso son:
@@ -11,7 +11,7 @@ Los objetivos generales de este curso son:
 - Reconocer diferentes herramientas y modalidades para el trabajo en equipo; cómo compartir datos, resultados y código, a través de repositorios digitales con git y github.
 - Entender los flujos de trabajo, es decir, cómo (y por qué) pasamos de los datos, a la limpieza, transformación y visualización, para luego comunicar nuestros resultados.
 
-● Formato:
+# Formato:
 - Encuentros semanales de máximo 2 horas.
 - Sincrónicos.
 - Día y horario a confirmar: Miércoles 15:00 hs.
@@ -20,7 +20,7 @@ Los objetivos generales de este curso son:
 # Contenidos y materiales
 
 - __Unidad 1.__ Introducción a R y Rstudio. 
-- ¿Por qué R? Instalación de Programas. Introducción al lenguaje y a la ambiente integrado de desarrollo (IDE). Directorios de trabajo y Proyectos. Objetos, tipos de variables, operadores y funciones básicas. Formatos de archivo. Documentación del código. Cómo pedir ayuda en R.
+¿Por qué R? Instalación de Programas. Introducción al lenguaje y a la ambiente integrado de desarrollo (IDE). Directorios de trabajo y Proyectos. Objetos, tipos de variables, operadores y funciones básicas. Formatos de archivo. Documentación del código. Cómo pedir ayuda en R.
 
 - __Unidad 2.__ Paquetes y Librerias. 
 Instalación de paquetes y activación de librerías. Importación y exportación de datos. Funciones exploratorias. Fuentes principales para descarga de datos. Formatos de datos abiertos y cerrados.
@@ -53,11 +53,14 @@ Introducción conceptual (Infografías vs. gráficos; ejemplos históricos. Jose
 
 # Bibliografía y sitios de consulta
 
+- [AnalizaR datos políticos](https://arcruz0.github.io/libroadp/)
 
-● [Ciencia de Datos para Gente Sociable](https://bitsandbricks.github.io/ciencia_de_datos_gente_sociable/)
+- [Ciencia de Datos para Gente Sociable](https://bitsandbricks.github.io/ciencia_de_datos_gente_sociable/)
 
-● [R for Data Science (en español)](https://es.r4ds.hadley.nz/)
+- [Documento Técnico N°6: Ciencia de Datos para el Turismo](https://dnme-minturdep.github.io/DT6_ciencia_de_datos_turismo/index.html#documento-t%C3%A9cnico-n%C2%BA6---resumen)
 
-● [AnalizaR datos políticos](https://arcruz0.github.io/libroadp/)
+- [R for Data Science (en español)](https://es.r4ds.hadley.nz/)
 
-● [Documento Técnico N°6: Ciencia de Datos para el Turismo](https://dnme-minturdep.github.io/DT6_ciencia_de_datos_turismo/index.html#documento-t%C3%A9cnico-n%C2%BA6---resumen)
+
+
+
