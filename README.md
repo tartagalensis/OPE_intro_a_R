@@ -59,6 +59,8 @@ Introducción a RmD. Construcción de tablas en kable.
 
 - [R for Data Science (en español)](https://es.r4ds.hadley.nz/)
 
+- [Pablo Tiscornia](https://pablotis.github.io/intro_r/a_diapositivas/01a_r_intro_presentacion.html#52)
+
 
 
 
