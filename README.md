@@ -1,5 +1,5 @@
 # OPE_intro_a_R
-Curso de Introducción a R para la Ciencia de Datos para el Observatorio Político Electoral - Ministerio del Interior
+Curso de Introducción a R para la Ciencia de Datos para el [Observatorio Político Electoral](https://www.argentina.gob.ar/interior/observatorioelectoral) - Ministerio del Interior
 
 # [Franco Galeano](https://tartagalensis.netlify.app/)
 
@@ -14,7 +14,7 @@ Los objetivos generales de este curso son:
 # Formato:
 - Encuentros semanales de máximo 2 horas.
 - Sincrónicos.
-- Día y horario a confirmar: Miércoles 15:00 hs.
+- Día y horario: Miércoles 15:00 hs.
 
 
 # Contenidos y materiales
@@ -29,20 +29,20 @@ Instalación de paquetes y activación de librerías. Importación y exportació
 R base y Tidyverse. Carga de datos con tidyverse. Formato de datos “tidy”. operaciones básicas de dplyr para limpieza y transformación. Trabajo y manipulación de
 dataframes.
 
-- __Unidad 4.__ Visualización de datos I. 
+- __Unidad 5.__ Visualización de datos I. 
 Introducción a ggplot2. Tipos de gráficos más usuales y elementos básicos. Trabajo en capas: datos, aesthetics, geometrías, facetas, stats, coordenadas y temas. Relación entre un gráfico y los datos. Representación como concepto. Ejes y variables.
 
-- __Unidad 5.__ Introducción a GIT y Github. 
-¿Qué es el control de versiones ¿Por qué GIT y Github? Crear una cuenta en Github. Crear y trabajar con repositorios. Repos públicos y privados. Commit, Push, Pull, Fork y Branchs: Para qué nos sirven. Proyectos en Github.
+- __Unidad 6.__ Introducción a GIT y Github e Integración con RStudio. 
+¿Qué es el control de versiones ¿Por qué GIT y Github? Crear una cuenta en Github. Crear y trabajar con repositorios. Repos públicos y privados. Commit, Push, Pull, Fork y Branchs: Para qué nos sirven. Proyectos en Github. Buenas prácticas de trabajo con git y R. Descarga de Paquetes en desarrollo con devtools.
 
-- __Unidad 6.__ Integración Git y Rstudio. 
-Buenas prácticas de trabajo con git y R. Descarga de Paquetes en desarrollo con devtools. Espacio Consulta general.
-
-- __Unidad 7.__ Limpieza y transformación de datos II. 
+- __Unidad 6.__ Limpieza y transformación de datos II. 
 Limpieza y manejo de datasets avanzado. Normalización de datos. Expresiones regulares.
 
-- __Unidad 8.__ Visualización de datos II. 
+- __Unidad 7.__ Visualización de datos II. 
 Introducción conceptual (Infografías vs. gráficos; ejemplos históricos. Joseph Minard, William Playfair, John Snow, Florence Nightingale, Harry Beck). Replicabilidad. Gramática de gráficos. Visualización y generación de gráficos en R: Nociones de graficación (forma, color, tamaño, color).
+
+- __Unidad 8.__ Informes reproducibles. 
+Introducción a RmD. Construcción de tablas en kable. 
 
 
 # Clase 1. 
