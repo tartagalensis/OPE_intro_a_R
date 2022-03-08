@@ -1,8 +1,8 @@
 ---
 title: "R para Ciencia de Datos"
-subtitle: "Clase 1"
+subtitle: "Clase 2"
 author: "Franco Galeano - Observatorio Político Electoral"
-date: "02/03/2022"
+date: "09/03/2022"
 output: ioslides_presentation
 ---
 
@@ -10,35 +10,27 @@ output: ioslides_presentation
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## ¿Quien soy?
+## ¿Qué vimos la clase pasada?
 
-[Franco Galeano](https://tartagalensis.netlify.app/)
+- Intro a R y RStudio
 
-- Made in Tartagal
+- Scripts
 
-- Politólogo en camino a Politólogo^2 (UTDT)
+- Tipos de valores
 
-- Científico de Datos (En el Ministerio desde 09/2020)
+- Vectores, Funciones y DataFrames
 
-## ¿Quiénes son ustedes?
+## ¿Qué veremos hoy?
 
-- Nombre
 
-- Background y formación previa
+- Instalación de paquetes y activación de librerías.
 
-- Conocimientos previos sobre la materia
+- Importar y exportar datos.
 
-- Expectativas
+- Funciones exploratorias.
 
-## Modalidad de aprendizaje en clase
+- Fuentes para descargar datos.
 
-- Teoría
-
-- Práctica acompañada
-
-- Práctica individual (en clase y por aparte)
-
-- Canal de comunicación oficial: [Slack](https://join.slack.com/t/observatoriop-osv2190/shared_invite/zt-140q0hivn-RAnltGFr2Y8QeKMwowHYmA)
 
 ## Sobre el programa
 
