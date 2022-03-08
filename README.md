@@ -47,6 +47,11 @@ Introducción a RmD. Construcción de tablas en kable.
 
 # Clase 1. 
 - [Slides - html](clase_1/clase_1_presentacion.html)
+- [Script](clase_1/clase_1_practica.R)
+
+# Clase 2. 
+- [Slides - html](clase_2/clase_2_presentacion.html)
+- [Data](clase_2)
 
 
 # Bibliografía y sitios de consulta
