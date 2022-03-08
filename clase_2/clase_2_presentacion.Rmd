@@ -27,403 +27,204 @@ knitr::opts_chunk$set(echo = FALSE)
 
 - Importar y exportar datos.
 
+- Proyectos
+
 - Funciones exploratorias.
 
 - Fuentes para descargar datos.
 
 
-## Sobre el programa
 
-```{r, results='asis', echo = FALSE, warning=FALSE}
+# Paquetes 
 
-df <- data.frame(semana = c(1,2,3,4,5,6,7,8),
-           contenido = c("Intro a R y R Studio", "Paquetes y Librerias", "Data Wrangling","ggplot2","Git+RStudio","Data Wrangling 2", "ggplot2 2", "RmD + Kable"))
 
+## Paquetes
 
-knitr::kable(tibble::as_tibble(df))
-```
+Un paquete (package) es una colección de funciones, datos y documentación que debemos cargar para poder expandir las herramientas de R.
 
+En la web de R se puede consultar la lista de [paquetes "oficiales" disponibles](https://cran.r-project.o
+rg/web/packages/avail
+able_packages_by_na
+me.html).
 
-## ¿Qué es R?
 
-- R Lenguaje de programación de código abierto (software libre) enfocado en análisis
-estadístico y visualización de datos.
+![](figures/paquetes.png){#id .class width=60% height=60%}
 
-- Creado por Ross Ithaka y Robert Gentelman (1991 a 1993)
+## Librería != Paquete
 
-- S -> R
+Las librerías son conjuntos de instrucciones que albergan scripts que pueden ser ejecutados con instrucciones inherentes de la librería, en general, estas vienen contenidas dentro de paquetes que deben ser preinstalados para poder usarlas.
 
-- Nace en el Año 2000: 1.0V (4.1.2V Noviembre 2021)
 
-- Nace el entorno de desarrollo integrado (IDE) R Studio (2011)
+## ¿Cómo INSTALAR un paquete?
 
-## Beneficios de R
+![](figures/instalar paquete.png){#id .class width=70% height=70%}
 
-- Multiplataforma (Win, Mac, Linux... PStation)
 
-- Desarrollado por estadísticos para estadísticas
+## ¿Cómo ACTIVAR un paquete?
 
-- Trabaja con vectores
+![](figures/activar_paquete.png){#id .class width=70% height=70%}
 
-- Potente herramienta para generar visualizaciones
 
-- Funcionalidad de base + paquetes específicos
+## Bonus Track: Instalar paquetes desde Github
 
-- Gran comunidad de usuarios colaborando (sobre todo en Ciencias Sociales)
+- **¿Qué es github?**
+*Github* es un repositorio digital, básicamente un Google Drive para código. Gran parte de los paquetes que forman parte del repositorio oficial de R (CRAN) comenzaron su vida en github.
 
-- Gratuito
+- Allí podremos encontrar paquetes que aún no están aprobados para ser parte de CRAN, así como también versiones de desarrollo (experimentales) con funciones nuevas o cambios que aún están siendo probados por los desarrolladores.
 
-## ¿Qué es R Studio?
+## Bonus Track: Instalar paquetes desde Github (1)
 
-Es un entorno de desarrollo integrado (IDE), una interfaz para facilitarnos la
-programación en R.
+Si queremos instalar un paquete desde github podemos hacerlo a través del paquete
+{devtools}
 
-Algunas ventajas de su uso:
+Para instalar paquete debemos correr: `install.packages(“devtools”)`
 
-- Autocompletado.
+El archivo ReadMe suele tener información para el uso y descarga del paquete. El formato suele ser:
+`devtools::install_github(”usuario/repositorio”)`
 
-- Resaltado de sintaxis.
+Luego llamamos a los paquetes como veníamos haciendo antes
+`library(paquete)` y luego la función que necesitemos.
 
-- Visualización inmediata.
+# Importar datos
 
-- Integración con GIT.
+## Importar datos
 
-- Documentación y ayuda integrada.
+- Fijarnos qué *tipo de archivo* queremos importar (csv, xlsx, txt, etc.)
 
-- Posibilidad de realizar informes con RMarkdown y de trabajo colaborativo.
+- Elegimos la *función* que vamos a usar para importar ese archivo.
 
-## Partes de RStudio
+a) Si el archivo está en nuestro equipo, es recomendable que esté alojado en la carpeta de nuestro proyecto. Recordatorio: consultemos a R donde está nuestro directorio de trabajo con getwd() y si es necesario establezcamos una nueva ruta con setwd()
 
+b) Si el archivo está subido en algún portal web, podemos descargarlo en nuestro equipo o copiar la ruta de descarga y pegarla en la función que vamos a usar en R.
 
-![](figures/rstudio.png){#id .class width=100% height=100%}
+## Importar un .csv
 
-## Interfaz de R Studio
+Utilizaremos la base de datos de elecciones 2021 de Salta
 
-- Editor de texto: En este panel podremos escribir/editar/ver los R script y los datasets.
-- Consola/Terminal: Acá es donde se ejecutan los comandos redactados en el editor
-(Editor).
-- Environment: En este panel Rstudio nos muestra qué datasets y qué objetos (variables)
-tenemos creadas en la memoria. Allí también podremos visualizar otras pestañas que
-más adelante veremos.
-- Outputs: Este es un panel multipróposito. En "Files" podemos navegar en nuestro
-escritorio y seleccionar los archivos que deseamos. En "Plots" nos muestra los gráficos
-que realicemos, y si son interactivos van a aparecer en "Viewer". En "Packages" se
-pueden ver cuáles son los paquetes instalados o disponibles en nuestro equipo. Por
-último en “Help” vamos a poder consultar dudas sobre funciones o paquetes.
+![](figures/data_local.png){#id .class width=100% height=100%}
 
 
-## Consola/Términal - ¿Cómo conversar con R?
+En el script de clase van a ver como importar online
 
-Los dos paneles de la izquierda son las dos formas principales de interactuar con R. El panel de abajo a la izquierda es la consola. Es el lugar que te permite conversar con R. Podés escribir comandos que se van a ejecutar inmediátamente cuando aprietes Enter y cuyo resultado se va a mostrar en la consola.
+## Algunas funciones para importar datos
 
-Por ejemplo, hacé click en la consola, escribí `2 + 2` y apretá Enter. Vas a ver algo como esto:
+![](figures/importar_archivos.png){#id .class width=100% height=100%}
 
-```{r}
+## Algunas funciones para importar datos (1)
 
-2 + 2
+![](figures/importar_archivos2.png){#id .class width=100% height=100%}
 
-```
 
+## MUY IMPORTANTE
 
-##  Editor de texto/script
+Tener en cuenta la ruta por la cual compartimos el archivo.
 
-Ahora, lo que podemos intentar es guardar ese pedazo de código (nuestro 2 + 2) para editarlo, al mismo tiempo que podemos ejecutarlo (correrlo). Los resultados nos van a aparecer en la consola (cuando sea texto) o en el panel de salida (cuando hagamos gráficos).
+`base_salta21 <- read_csv("~/Documents/Ministerio_Interior/OPE_intro_a_R/clase_2/data/escrutinio_generales_Salta2021.csv")`
 
-Ventajas de utilización de Scripts:
+- Si se la compartimos a otra persona, **se rompe**
 
-● Ordena las instrucciones utilizadas.
+- Si cambiamos de computadora, **se rompe**
 
-● Permite guardar los diferentes comandos.
+- Si lo cambiamos de lugar, **se rompe**
 
-● En caso de algún cambio, se puede editar una parte del código.
+# PROYECTOS
 
-● Permite replicar el código a utilizar.
+## Paso a paso
 
+![](figures/crear_proyecto.png){#id .class width=100% height=100%}
 
-##  Editor de texto/script (1)
+## Paso a paso (1)
 
-Ahora, hacé click en el script, escribí `2 + 2`, selecciona todo el bloque de código y apretá Enter.
+![](figures/crear_proyecto2.png){#id .class width=100% height=100%}
 
-En la consola vamos a ver lo mismo que la vez pasada:
+## Proyectos y hojas de ruta
 
-```{r}
+Es la mejor forma de trabajar con Rstudio. Cada proyecto permite segmentar sólo la
+información y recursos útiles en una misma carpeta (directorio) de trabajo.
 
-2 + 2
+Utilizar proyectos nos permite continuar las tareas desde donde las dejamos la última vez al terminar una sesión. Es sólo cuestión de recuperar el proyecto deseado la próxima vez que abrimos RStudio, cliqueando en 
+`File -> Recent Projects -> "Mi_proyecto"`
 
-```
+Importante: Antes de crear un proyecto, siempre verifiquemos en que carpeta estamos. Es recomendable tener todos los proyectos de R organizados como subcarpetas de un mismo directorio. (Ver archivo como_nombrar_cosas)
 
-## Recreo 5'
+## Proyectos y hojas de ruta (1)
 
-# VALORES
+Ventajas:
 
-## Valores
+- Le indicamos a R dónde "vive" nuestra carpeta de trabajo
 
-En R la unidad mínima para trabajar son los valores:
+- La ruta ya no contiene ninguna referencia personal que impida ser abierto en otra computadora
 
-- `1` es un valor (numérico),
+**RECOMENDACION**
 
-- `"uno"` es un valor (cáracter),
+**SIEMPRE** TRABAJAR CON PROYECTOS
 
-- `"1"` es un valor (cáracter) y
+## Ejemplo de proyecto
 
-- `"Esto es un uno"` también es un valor (cáracter).
+![](figures/ejemplo_proyecto.png){#id .class width=100% height=100%}
 
-## Usemos R como una calculadora
+# EJERCICIOS 
 
-```{r, include=TRUE, echo=TRUE}
+## EJERCICIOS
 
-2 + 18
-50821/6
-21 ^ 2
-log (4) / 9 ^ 2
+1. Crear una carpeta donde alojar el proyecto de trabajo
 
-```
+2. Crear una estructura de carpetas similar a la propuesta de ejemplo
 
-## Vectores 
+3. En la carpeta **data** incorporar la base de datos provista
 
-A un conjunto de valores lo llamaremos vector y R los interpretará bajo el comando c().
+4. Crear un script de trabajo y alojarlo en la carpeta **script**
 
-Los vectores, como los valores, también serán de un tipo determinado:
 
-- Vector numérico (numeric)
-c(1, 2, 3, 4, 5)
-c(1:5)
-- Vector de texto (character)
-c("uno", "dos", "tres", "cuatro", "cinco")
+# BREAK 5'
 
-# FUNCIONES
 
-## Funciones
+# FUNCIONES EXPLORATORIAS
 
-- La función es una operación que nos ayuda a resolver un problema que de otra forma llevaría más pasos/tiempo.
 
-- Una función tiene nombre y suele (intenta) ser intuitivo respecto a la acción que realiza (el problema que resuelve). También comienza y termina con paréntesis (), donde se ubica el o los argumentos.
+## FUNCIONES EXPLORATORIAS
 
-![](figures/funcion.png){#id .class width=60% height=60%}
+![](figures/funciones_exploratorias.png){#id .class width=100% height=100%}
 
-## Funciones (1)
+## OTRAS FUNCIONES EXPLORATORIAS
 
-- Por ejemplo, la función class() evalúa el tipo (numérico, cáracter) de un elemento
-Evaluemos de qué tipo es el valor 2
+Prueben utilizando `head()`, `tail()`, `names()` y `View()`
 
-```{r, echo=TRUE}
-class(2)
-```
+¿Que tarea realizan estas funciones?
 
-¿y el valor "dos"?
-```{r, echo=TRUE}
-class("dos")
-```
 
-## Funciones (2)
+## También podemos manipular nuestra base de datos
 
-- Otras funciones nos permiten incluir más de un argumento. En este caso, cada uno de ellos se separa con una coma (,).
-Por ejemplo, la función sum() permite sumar varios valores numéricos:
-```{r, echo=TRUE}
-sum(2, 5, 10)
-```
+![](figures/subset.png){#id .class width=100% height=100%}
 
+## También podemos exportar los datos
 
-La función paste0() permite pegar varios valores de tipo texto:
-```{r, echo=TRUE}
-paste0("Esto", "es", "un texto", "con", "seis", "valores")
-```
+![](figures/funciones_exportar.png){#id .class width=100% height=100%}
 
+# MANOS A LA OBRA
 
-## Funciones (3)
+## Ejercicios (1)
 
-- Ciertas funciones también incluyen parámetros, los cuales agregan especificaciones que hacemos a la operación que realiza la función.
-Por ejemplo, queremos una función que pegue los valores anteriores pero que los separe por un espacio. En este caso, la función paste() (sin el 0 al final) contiene un parámetro llamado sep =, que permite definir un separador entre cada argumento.
+1. Leemos la base de datos 
 
-```{r, echo=TRUE}
-paste("Esto", "es", "un texto", "con", "seis", "valores", sep = "_")
+2. Utilizamos algunas de las funciones exploratorias propuestas
 
-```
+3. Describimos brevemente la base de datos (tip tiene NAs? podemos describir estadisticamente alguna columna?)
 
-# EJERCICIOS
+4. Extraemos todos los registros de las columnas 1,3,5,6,9 y 10. Guardarlo en un nuevo dataframe.
 
-## Ejercicios
+5. Exportaremos ese dataFrame como un archivo .csv
 
-1. Sumar dos o más valores sin utilizar una función
 
-2. Crear un vector numérico que contenga 7 valores
+## Luego de clase
 
-3. Crear un vector de texto que contenga 3 valores
+1. Seleccionar una base de datos de su interés y crear un proyecto 
 
-4. Verificar de qué tipo es el valor "67" (comprobar con comillas y sin comillas)
+2. Importar el archivo y aplicar funciones descriptivas.
 
-5. Pegar dos o más valores de tipo character (texto), cada uno separado por un espacio en blanco
+3. Guardar códigos ejecutados en un script
 
-## Objetos
+4. No olvidar comentar cada paso utilizando los `#`
 
-. En R el elemento más importante es el objeto. Tanto valores como vectores (y practicamente, cualquier elemento) pueden ser asignados a un objeto.
-
-. Al objeto debemos definirlo por un nombre (elige tu propia aventura) y asignarle el contenido:
-
-
-![](figures/objeto.png){#id .class width=60% height=60%}
-
-## Objetos (1)
-
-Al igual que valores y vectores, hay diferentes tipos de objetos:
-
-- Objeto numérico (numeric)
-```{r, echo=TRUE}
-edad <- c(24, 56, 75, 42, 99)
-```
-
-
-- Objeto de texto (character)
-```{r, echo=TRUE}
-nombre <- c("D'rtanian", "Rigoberta", "Menganita",
-            "Juancito", "Estanislao")
-```
-
-- (otro) objeto de texto (character)
-```{r, echo=TRUE}
-nombre_y_apellido <- c("D'artanian estrujillo", "Rigoberta manchuria", 
-                       "Menganita fulaique", 
-                       "Juancito loquillo", "Estanislao leningrado")
-```
-
-## Objetos (2)
-
-- Para ver el contenido de un objeto, simplemente debemos escribir su nombre y ejecutar en el script o la consola
-
-```{r, echo = TRUE}
-edad
-nombre_y_apellido
-```
-
-## Objetos (3)
-
-### RECOMENDACIONES
-
-- No se aceptan espacios. Por ejemplo un objeto llamado "nombre y apellido"
-
-- No se puede empezar con un número: Objeto llamado "1_objeto"
-- Evitar símbolos (&, ^, /, !) y acentos
-- Evitar que objetos y funciones tengan el mismo nombre
-- Nombrar todo espacio_con_guion_bajo (es más una convención)
-
-# DATAFRAMES
-
-## Dataframes
-
-El elemento data.frame es lo que conocemos como una base de datos: Filas (casos) y columnas (variables) relacionadas entre sí:
-
-![](figures/df.png){#id .class width=60% height=60%}
-
-## Dataframes (1)
-
-La función data.frame() nos permite crear una base de datos vinculando vectores:
-
-```{r, echo = TRUE}
-data.frame(nombre_y_apellido, edad)
-```
-
-Podemos guardarlo en un objeto:
-
-```{r, echo = TRUE}
-base_personas <- data.frame(nombre_y_apellido, edad)
-```
-
-## Dataframes (2)
-
-Algunas funciones para trabajar con los data frames:
-
-```{r, echo = TRUE}
-dim(base_personas)
-summary(base_personas)
-```
-
-
-## Navegando por objetos: Vectores
-
-R base nos permite navegar entre los valores de un vector o data frame, y lo hace a través de []
-- Supongamos que queremos extraer el 2do valor del objeto edad:
-
-```{r, echo = TRUE}
-edad <- c(24, 56, 75, 42, 99)
-edad[2]
-```
-
-- Podemos guardar en un objeto dicho valor
-```{r, echo = TRUE}
-valor_2do <- edad[2]
-valor_2do
-```
-
-
-## Navegando por objetos: Vectores (1)
-
-Así como podemos consultarle a R por un valor en particular de un vector, también podemos usar el comando `[]` para editar ese valor:
-```{r, echo = TRUE}
-edad[2]
-edad[2] <- 76
-```
-
-Chequeo el contenido de mi objeto edad
-
-```{r, echo = TRUE}
-edad
-```
-
-## Navegando por dfs
-
-Supongamos que tenemos la siguiente base de datos:
-
-```{r, echo = TRUE}
-edad <- c(24, 56, 75, 42, 99)
-nombre_y_apellido <- c("D'artanian estrujillo", "Rigoberta manchuria", 
-                       "Menganita fulaique",  "Juancito loquillo", 
-                       "Estanislao leningrado")
-base_personas <- data.frame(nombre_y_apellido, edad)
-base_personas
-```
-
-
-## Navegando por dfs (1)
-
-Queremos extraer la edad de Menganita fulaique:
-base_personas[3,2]
-
-![](figures/df_navegando.png){#id .class width=60% height=60%}
-
-## Navegando por dfs (2)
-
-También podemos consultarle a R por los valores de una columna entera de nuestra base con el símbolo `$`:
-
-
-```{r, echo = TRUE}
-base_personas$nombre_y_apellido
-```
-
-Y aplicar una función sobre esa columna
-
-```{r, echo = TRUE}
-mean(base_personas$edad)
-```
-
-
-# EJERCICIOS
-
-## Ejercicios
-
-1. Crear un vector llamado distrito que contenga 5 valores (5 nombres de provincias)
-
-2. Extraer el segundo valor del vector creado y asignarlo a un nuevo objeto
-
-```{r, echo = TRUE}
-#Dados estos vectores:
-categoria <- c("Dip Nac", "Dip Nac", "Gobernador", "Senador", "Dip Nac")
-eleccion <- c("PASO 2021", "PASO 2021", "Generales 2011", "Generales 2021", "PASO 2021")
-
-```
-
-1. Crear un objeto de tipo data.frame (base de datos) que contenga el vector creado (partido) más los dos propuestos (distrito y categoria).
-2. Extraer columna categoria
-2. Extraer del data.frame el valor de la tercera fila y segunda columna.
-
-
+5. Enviarlo por Slack.
 
