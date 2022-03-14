@@ -29,10 +29,10 @@ Instalación de paquetes y activación de librerías. Importación y exportació
 R base y Tidyverse. Carga de datos con tidyverse. Formato de datos “tidy”. operaciones básicas de dplyr para limpieza y transformación. Trabajo y manipulación de
 dataframes.
 
-- __Unidad 5.__ Visualización de datos I. 
+- __Unidad 4.__ Visualización de datos I. 
 Introducción a ggplot2. Tipos de gráficos más usuales y elementos básicos. Trabajo en capas: datos, aesthetics, geometrías, facetas, stats, coordenadas y temas. Relación entre un gráfico y los datos. Representación como concepto. Ejes y variables.
 
-- __Unidad 6.__ Introducción a GIT y Github e Integración con RStudio. 
+- __Unidad 5.__ Introducción a GIT y Github e Integración con RStudio. 
 ¿Qué es el control de versiones ¿Por qué GIT y Github? Crear una cuenta en Github. Crear y trabajar con repositorios. Repos públicos y privados. Commit, Push, Pull, Fork y Branchs: Para qué nos sirven. Proyectos en Github. Buenas prácticas de trabajo con git y R. Descarga de Paquetes en desarrollo con devtools.
 
 - __Unidad 6.__ Limpieza y transformación de datos II. 
@@ -45,19 +45,24 @@ Introducción conceptual (Infografías vs. gráficos; ejemplos históricos. Jose
 Introducción a RmD. Construcción de tablas en kable. 
 
 
+
 # Clase 1. 
 - [Slides - html](clase_1/clase_1_presentacion.html)
 - [Script](clase_1/clase_1_practica.R)
+
 
 # Clase 2. 
 - [Slides - html](clase_2/clase_2_presentacion.html)
 - [Data](clase_2/data)
 - [Scripts](clase_2/script)
 
+
 # Clase 3. 
 - [Slides - html](clase_3/clase_3_presentacion.html)
 - [Data](clase_3/data)
 - [Scripts](clase_3/script)
+
+
 
 # Bibliografía y sitios de consulta
 
